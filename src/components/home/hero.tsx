@@ -1,5 +1,6 @@
 import { GridLine } from "../page-grid";
 import { CornerBox } from "../common/corner-box";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -22,7 +23,7 @@ export default function Hero() {
                 applications.
               </p>
             </CornerBox>
-            <button>VIEW PROJECTS -&gt;</button>
+            <button className="flex">VIEW PROJECTS -&gt;</button>
           </div>
         </div>
       </div>
