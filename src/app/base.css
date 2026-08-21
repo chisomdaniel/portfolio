@@ -1,0 +1,181 @@
+:root {
+  --page-inset: 40px;
+
+  --background: black;
+  --foreground: #fbfbf6;
+  --color-primary: #7fee64;
+  --color-secondary: #fbfbf6;
+
+  --color-primary: #7fee64;
+  --color-secondary: #7fee6414;
+  --color-text: rgb(149, 150, 149);
+  --color-accent: #333333;
+
+  --color-a3367bf: rgb(251, 251, 246); /* #fbfbf6;*/
+  --color-52945c2: #7fee6405;
+  --color-1102bbb: #7fee640a;
+  --color-6e07696: rgba(127, 238, 100, 0.161);
+  --color-2b05b9a: rgb(29, 51, 26);
+  --color-6e9ba25: rgb(32, 54, 28);
+  --color-925304d: #0a0a0a;
+  --color-af5f99f: rgb(14, 19, 13);
+  --color-82fd493: #000000;
+  --color-af2ff19: #ffffff;
+  --color-379f51e: #02010100;
+
+  --typography-primary-font-family: "Instrument Sans";
+
+  --typography-primary-font-size: 22px;
+  --typography-primary-font-weight: 500;
+  --typography-primary-text-transform: none;
+  --typography-primary-font-style: normal;
+  --typography-primary-text-decoration: none;
+  --typography-primary-line-height: 1.4em;
+
+  --typography-secondary-font-family: "Inter";
+  --typography-secondary-font-size: 20px;
+  --typography-secondary-font-weight: 500;
+  --typography-secondary-text-transform: none;
+  --typography-secondary-font-style: normal;
+  --typography-secondary-text-decoration: none;
+  --typography-secondary-line-height: 1.4em;
+
+  --typography-text-font-family: "Inter";
+  --typography-text-font-size: 16px;
+  --typography-text-font-weight: 400;
+  --typography-text-text-transform: none;
+  --typography-text-font-style: normal;
+  --typography-text-text-decoration: none;
+  --typography-text-line-height: 1.5em;
+
+  --typography-accent-font-family: "Inter";
+  --typography-accent-font-size: 16px;
+  --typography-accent-font-weight: 600;
+  --typography-accent-text-transform: uppercase;
+  --typography-accent-font-style: normal;
+  --typography-accent-text-decoration: none;
+  --typography-accent-line-height: 1.5em;
+
+  --typography-99ba269-font-family: "Instrument Sans";
+  --typography-99ba269-font-size: 78px;
+  --typography-99ba269-font-weight: 500;
+  --typography-99ba269-text-transform: none;
+  --typography-99ba269-font-style: normal;
+  --typography-99ba269-text-decoration: none;
+  --typography-99ba269-line-height: 1em;
+
+  --typography-753b858-font-family: "Instrument Sans";
+  --typography-753b858-font-size: 52px;
+  --typography-753b858-font-weight: 500;
+  --typography-753b858-text-transform: none;
+  --typography-753b858-font-style: normal;
+  --typography-753b858-text-decoration: none;
+  --typography-753b858-line-height: 1.15em;
+
+  --typography-6d6fbcc-font-family: "Instrument Sans";
+  --typography-6d6fbcc-font-size: 38px;
+  --typography-6d6fbcc-font-weight: 500;
+  --typography-6d6fbcc-text-transform: none;
+  --typography-6d6fbcc-font-style: normal;
+  --typography-6d6fbcc-text-decoration: none;
+  --typography-6d6fbcc-line-height: 1.2em;
+
+  --typography-5f4dc92-font-family: "Instrument Sans";
+  --typography-5f4dc92-font-size: 30px;
+  --typography-5f4dc92-font-weight: 500;
+  --typography-5f4dc92-text-transform: none;
+  --typography-5f4dc92-font-style: normal;
+  --typography-5f4dc92-text-decoration: none;
+  --typography-5f4dc92-line-height: 1.25em;
+
+  --typography-c7c0e77-font-family: "Instrument Sans";
+  --typography-c7c0e77-font-size: 24px;
+  --typography-c7c0e77-font-weight: 500;
+  --typography-c7c0e77-text-transform: none;
+  --typography-c7c0e77-font-style: normal;
+  --typography-c7c0e77-text-decoration: none;
+  --typography-c7c0e77-line-height: 1.33em;
+
+  --typography-d90deb1-font-family: "Instrument Sans";
+  --typography-d90deb1-font-size: 18px;
+  --typography-d90deb1-font-weight: 500;
+  --typography-d90deb1-text-transform: none;
+  --typography-d90deb1-font-style: normal;
+  --typography-d90deb1-text-decoration: none;
+  --typography-d90deb1-line-height: 1.33em;
+
+  --typography-355ea28-font-family: "Instrument Sans";
+  --typography-355ea28-font-size: 56px;
+  --typography-355ea28-font-weight: 500;
+  --typography-355ea28-text-transform: none;
+  --typography-355ea28-font-style: normal;
+  --typography-355ea28-text-decoration: none;
+  --typography-355ea28-line-height: 1.14em;
+
+  --typography-fd53f53-font-family: "Inter";
+  --typography-fd53f53-font-size: 14px;
+  --typography-fd53f53-font-weight: 400;
+  --typography-fd53f53-text-transform: none;
+  --typography-fd53f53-font-style: normal;
+  --typography-fd53f53-text-decoration: none;
+  --typography-fd53f53-line-height: 1.5em;
+
+  --typography-e49a534-font-family: "Inter";
+  --typography-e49a534-font-size: 22px;
+  --typography-e49a534-font-weight: 400;
+  --typography-e49a534-text-transform: none;
+  --typography-e49a534-font-style: normal;
+  --typography-e49a534-text-decoration: none;
+  --typography-e49a534-line-height: 1.36em;
+
+  --typography-4454deb-font-family: "Inter";
+  --typography-4454deb-font-size: 16px;
+  --typography-4454deb-font-weight: 500;
+  --typography-4454deb-text-transform: none;
+  --typography-4454deb-font-style: normal;
+  --typography-4454deb-text-decoration: none;
+  --typography-4454deb-line-height: 1.5em;
+
+  --typography-11a8d09-font-family: "Inter";
+  --typography-11a8d09-font-size: 16px;
+  --typography-11a8d09-font-weight: 500;
+  --typography-11a8d09-text-transform: uppercase;
+  --typography-11a8d09-font-style: normal;
+  --typography-11a8d09-text-decoration: none;
+  --typography-11a8d09-line-height: 1.5em;
+
+  --typography-bf2f07d-font-family: "Inter";
+  --typography-bf2f07d-font-size: 14px;
+  --typography-bf2f07d-font-weight: 500;
+  --typography-bf2f07d-text-transform: uppercase;
+  --typography-bf2f07d-font-style: normal;
+  --typography-bf2f07d-text-decoration: none;
+  --typography-bf2f07d-line-height: 1.5em;
+
+  --typography-f4caf67-font-family: "Instrument Sans";
+  --typography-f4caf67-font-size: 28px;
+  --typography-f4caf67-font-weight: 400;
+  --typography-f4caf67-text-transform: none;
+  --typography-f4caf67-font-style: normal;
+  --typography-f4caf67-text-decoration: none;
+  --typography-f4caf67-line-height: 1.28em;
+
+  --typography-8f6f62e-font-family: "Instrument Sans";
+  --typography-8f6f62e-font-size: 132px;
+  --typography-8f6f62e-font-weight: 500;
+  --typography-8f6f62e-text-transform: none;
+  --typography-8f6f62e-font-style: normal;
+  --typography-8f6f62e-text-decoration: none;
+  --typography-8f6f62e-line-height: 1em;
+  --typography-8f6f62e-letter-spacing: -0.02em;
+
+  background-color: var(--color-925304d);
+  color: var(--color-text);
+  font-family: var(--typography-text-font-family), Sans-serif;
+  font-size: var(--typography-text-font-size);
+  font-weight: var(--typography-text-font-weight);
+  text-transform: var(--typography-text-text-transform);
+  font-style: var(--typography-text-font-style);
+  text-decoration: var(--typography-text-text-decoration);
+  line-height: var(--typography-text-line-height);
+}
