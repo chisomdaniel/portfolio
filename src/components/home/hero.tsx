@@ -9,6 +9,7 @@ export default function Hero() {
       markers={true}
       className="min-h-screen px-20 py-10 bg-background bg-hero-pattern bg-center bg-cover bg-no-repeat overlay"
     >
+      {/* overlay */}
       <div className="absolute inset-0 bg-background/30" />
       <div className="relative min-h-screen flex flex-col justify-between">
         <h1 className="text-[132px] font-medium text-foreground font-primary leading-33 tracking-[-2.64px]">
