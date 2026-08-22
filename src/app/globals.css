@@ -26,6 +26,14 @@
   --background-image-hero-pattern: url("/globe-new-2.webp");
 }
 
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
 body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
