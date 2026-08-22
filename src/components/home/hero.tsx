@@ -1,4 +1,4 @@
-import { GridLine } from "../page-grid";
+import { GridLine } from "../common/page-grid";
 import { CornerBox } from "../common/corner-box";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";

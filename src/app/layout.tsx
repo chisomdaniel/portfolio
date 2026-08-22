@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/common/header";
+import Header from "@/components/common/sections/header";
 import { Instrument_Sans, Inter } from "next/font/google";
-import { PageGrid } from "@/components/page-grid";
+import { PageGrid } from "@/components/common/page-grid";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",

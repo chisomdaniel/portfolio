@@ -23,15 +23,23 @@ type GridLineProps = {
   markers?: boolean;
   children?: React.ReactNode;
   className?: string;
+  bottomBorder?: boolean;
 };
 
 export function GridLine({
   markers = false,
   children,
   className = "",
+  bottomBorder = true,
 }: GridLineProps) {
   return (
-    <div className={cn("relative border-b border-line-color", className)}>
+    <div
+      className={cn(
+        "relative",
+        bottomBorder && "border-b border-line-color",
+        className,
+      )}
+    >
       {markers && (
         <>
           <GridMarker side="left" />

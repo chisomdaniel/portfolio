@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GridLine } from "../page-grid";
+import { GridLine } from "@/components/common/page-grid";
 
 export default function Header() {
   return (
