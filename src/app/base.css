@@ -1,12 +1,12 @@
 :root {
   --page-inset: 40px;
 
-  --background: black;
+  --background: #0a0a0a;
   --foreground: #fbfbf6;
   --color-primary: #7fee64;
-  --color-secondary: #fbfbf6;
+  /* --color-secondary: #fbfbf6; */
 
-  --color-primary: #7fee64;
+  --color-primary: rgb(127, 238, 100);
   --color-secondary: #7fee6414;
   --color-text: rgb(149, 150, 149);
   --color-accent: #333333;
@@ -169,7 +169,7 @@
   --typography-8f6f62e-line-height: 1em;
   --typography-8f6f62e-letter-spacing: -0.02em;
 
-  background-color: var(--color-925304d);
+  /* background-color: var(--color-925304d);
   color: var(--color-text);
   font-family: var(--typography-text-font-family), Sans-serif;
   font-size: var(--typography-text-font-size);
@@ -177,5 +177,5 @@
   text-transform: var(--typography-text-text-transform);
   font-style: var(--typography-text-font-style);
   text-decoration: var(--typography-text-text-decoration);
-  line-height: var(--typography-text-line-height);
+  line-height: var(--typography-text-line-height); */
 }
