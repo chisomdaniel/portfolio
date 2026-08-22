@@ -27,7 +27,7 @@ export default function Header() {
         </ul>
         <div className="flex shrink-0 items-center">
           <a
-            className="border font-medium px-4 py-2 text-primary text-center border-(--color-2b05b9a) bg-(--color-af5f99f) hover:bg-(--color-6e07696)"
+            className="border font-medium px-4 py-2 text-primary text-center border-green-a bg-green-light-a hover:bg-primary/8"
             href="https://daniel.dev"
             target="_blank"
             rel="noopener noreferrer"
@@ -35,7 +35,7 @@ export default function Header() {
             daniel.dev
           </a>
           <Link
-            className="px-4 py-2 w-28 text-center text-wrap bg-primary hover:bg-(--color-af5f99f) border border-primary hover:border-(--color-2b05b9a) hover:text-primary text-black"
+            className="px-4 py-2 w-28 text-center text-wrap bg-primary hover:bg-primary/8 border border-primary hover:border-green-a hover:text-primary text-black"
             href="/contact"
           >
             <span className="font-semibold">

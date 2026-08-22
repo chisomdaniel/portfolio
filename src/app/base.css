@@ -7,13 +7,13 @@
   /* --color-secondary: #fbfbf6; */
 
   --color-primary: rgb(127, 238, 100);
-  --color-secondary: #7fee6414;
+  --color-secondary: rgba(127, 238, 100, 0.078);
   --color-text: rgb(149, 150, 149);
-  --color-accent: #333333;
+  --color-accent: rgb(51, 51, 51);
 
   --color-a3367bf: rgb(251, 251, 246); /* #fbfbf6;*/
-  --color-52945c2: #7fee6405;
-  --color-1102bbb: #7fee640a;
+  --color-52945c2: rgba(127, 238, 100, 0.02);
+  --color-1102bbb: rgba(127, 238, 100, 0.039);
   --color-6e07696: rgba(127, 238, 100, 0.161);
   --color-2b05b9a: rgb(29, 51, 26);
   --color-6e9ba25: rgb(32, 54, 28);
@@ -21,7 +21,7 @@
   --color-af5f99f: rgb(14, 19, 13);
   --color-82fd493: #000000;
   --color-af2ff19: #ffffff;
-  --color-379f51e: #02010100;
+  --color-379f51e: rgba(2, 1, 1, 0);
 
   --typography-primary-font-family: "Instrument Sans";
 
