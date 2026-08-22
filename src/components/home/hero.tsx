@@ -31,10 +31,13 @@ export default function Hero() {
             </CornerBox>
             <Link
               href="/projects"
-              className="flex gap-10 items-center font-semibold hover:bg-green-light-a px-4 py-3 border border-primary hover:border-green-light-b bg-primary text-black hover:text-primary stroke-black hover:stroke-primary"
+              className="group flex gap-10 items-center font-semibold hover:bg-green-light-a px-4 py-3 border border-primary hover:border-green-light-b bg-primary text-black hover:text-primary stroke-black hover:stroke-primary"
             >
               <span>VIEW PROJECTS</span>
-              <ArrowRight strokeWidth={3} className=" w-5 h-5" />
+              <ArrowRight
+                strokeWidth={3}
+                className="w-5 h-5 group-hover:translate-x-0.5 translate-transform"
+              />
             </Link>
           </div>
         </div>
