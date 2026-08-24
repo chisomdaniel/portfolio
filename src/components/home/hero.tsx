@@ -1,7 +1,8 @@
 import { GridLine } from "../common/page-grid";
-import { CornerBox } from "../common/corner-box";
+import CornerBox from "../common/corner-box";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import BtnPrimary from "../common/btn-primary";
 
 export default function Hero() {
   return (
@@ -22,23 +23,15 @@ export default function Hero() {
           </div>
 
           <div className="w-125 flex flex-col items-start gap-10">
-            <CornerBox>
+            <CornerBox className="p-4 border border-green-a">
               <p className="tp-primary leading-7.5">
                 Hi, I&apos;m Daniel. Specializing in modern web technologies, I
                 turn complex ideas into fast, reliable, and maintainable
                 applications.
               </p>
             </CornerBox>
-            <Link
-              href="/projects"
-              className="group flex gap-10 items-center font-semibold hover:bg-green-light-a px-4 py-3 border border-primary hover:border-green-light-b bg-primary text-black hover:text-primary stroke-black hover:stroke-primary"
-            >
-              <span>VIEW PROJECTS</span>
-              <ArrowRight
-                strokeWidth={3}
-                className="w-5 h-5 group-hover:translate-x-0.5 translate-transform"
-              />
-            </Link>
+
+            <BtnPrimary text="VIEW PROJECTS" />
           </div>
         </div>
       </div>

@@ -1,10 +1,13 @@
+import { cn } from "@/utils/cn";
+
 type CornerBoxProps = {
+  className?: string;
   children: React.ReactNode;
 };
 
-export function CornerBox({ children }: CornerBoxProps) {
+export default function CornerBox({ className, children }: CornerBoxProps) {
   return (
-    <div className="relative p-4 border border-green-a">
+    <div className={cn("relative", className)}>
       {/* top-left */}
       <span className="absolute -top-px -left-px h-2.5 w-2.5 border-l border-t border-primary" />
 

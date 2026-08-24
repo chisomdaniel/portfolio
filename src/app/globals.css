@@ -8,7 +8,8 @@
 
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
-  --color-text: var(--foreground);
+  --color-text: var(--foreground); /* --color-text */
+  --color-secondary-text: var(--color-text);
   --color-white-text: var(--foreground);
 
   --color-accent: var(--color-accent);
