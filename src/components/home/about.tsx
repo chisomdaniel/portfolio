@@ -7,31 +7,34 @@ import BtnPrimary from "../common/btn-primary";
 
 export default function About() {
   return (
-    <GridLine markers className="px-20 py-30 flex flex-col gap-18">
+    <GridLine
+      markers
+      className="px-10 py-15 lg:px-20 lg:py-30 flex flex-col gap-12 lg:gap-18 bg-background"
+    >
       <div className="flex flex-col gap-5">
         <Eyebrow title="ABOUT" />
-        <h2 className="font-primary text-foreground text-[52px] leading-15 font-medium">
+        <h2 className="font-primary text-foreground text-[38px]/[43.7px] md:text-[44px]/[50.6px] lg:text-[52px]/[50.6px] font-medium">
           Specializing in modern web technologies, I turn complex ideas into
           fast, reliable, and maintainable applications.
         </h2>
       </div>
-      <div className="grid grid-cols-3 gap-14 text-secondary-text">
-        <div className="flex flex-col justify-between">
-          <p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 text-secondary-text">
+        <div className="md:col-span-2 lg:col-span-1 flex gap-6 flex-wrap items-end lg:items-start lg:flex-col justify-between">
+          <p className="max-w-90">
             I specialize in system architecture and scalable web engineering.
             From backend services to frontend performance, I approach
             development with structure, clarity, and long-term thinking.
           </p>
           <SocialIcons />
         </div>
-        <div className="justify-self-center">
-          <CornerBox>
+        <div className="justify-self-center w-full">
+          <CornerBox className="w-full">
             <Image
               src="/images/me.png"
               alt="Profile Picture"
               width={400}
               height={500}
-              className="h-125 w-auto object-cover object-center"
+              className="w-full h-87.5 lg:h-125 object-cover object-center"
             />
           </CornerBox>
         </div>
