@@ -8,7 +8,7 @@ export default function Header() {
         <h1 className="text-5xl font-bold">
           D<span className="text-primary">.</span>
         </h1>
-        <ul className="absolute left-1/2 -translate-x-1/2 flex gap-6">
+        <ul className="hidden xl:flex absolute left-1/2 -translate-x-1/2 gap-6">
           <Link className="text-primary" href="/">
             <li>HOME</li>
           </Link>
@@ -25,7 +25,7 @@ export default function Header() {
             <li>BLOG</li>
           </Link>
         </ul>
-        <div className="flex shrink-0 items-center">
+        <div className="hidden md:flex shrink-0 items-center">
           <a
             className="border font-medium px-4 py-2 text-primary text-center border-green-a bg-green-light-a hover:bg-primary/8"
             href="https://daniel.dev"

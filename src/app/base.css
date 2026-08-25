@@ -1,5 +1,5 @@
 :root {
-  --page-inset: 40px;
+  --page-inset: 20px;
 
   --background: #0a0a0a;
   --foreground: #fbfbf6;
@@ -178,4 +178,10 @@
   font-style: var(--typography-text-font-style);
   text-decoration: var(--typography-text-text-decoration);
   line-height: var(--typography-text-line-height); */
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --page-inset: 40px;
+  }
 }
