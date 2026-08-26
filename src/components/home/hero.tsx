@@ -11,7 +11,7 @@ export default function Hero() {
       {/* overlay */}
       <div className="absolute inset-0 bg-background/30" />
       <div className="relative min-h-162.5 xl:min-h-screen flex flex-col justify-center gap-6 xl:justify-between">
-        <h1 className="m-10 text-center xl:text-start text-[50px] md:text-[70px] xl:text-[132px] font-medium text-foreground font-primary leading-12.5 md:leading-17.5 xl:leading-33 tracking-[-1px] md:tracking-[-1.4px] xl:tracking-[-2.64px]">
+        <h1 className="mb-10 text-center xl:text-start text-[50px] md:text-[70px] xl:text-[132px] font-medium text-foreground font-primary leading-12.5 md:leading-17.5 xl:leading-33 tracking-[-1px] md:tracking-[-1.4px] xl:tracking-[-2.64px]">
           Architecting the Modern Web
         </h1>
         <div className="flex flex-col xl:flex-row gap-6 items-center xl:items-end justify-between">
