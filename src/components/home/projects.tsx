@@ -2,8 +2,37 @@ import { GridLine } from "../common/page-grid";
 import Eyebrow from "../common/eyebrow";
 import Image from "next/image";
 import CornerBox from "../common/corner-box";
+import BtnPrimary from "../common/btn-primary";
+import { PROJECTS } from "../../data/projects.data";
 
-export function ProjectItem() {}
+export function ProjectItem({
+  project,
+}: {
+  project: (typeof PROJECTS)[number];
+}) {
+  return (
+    <div className="flex flex-col gap-6">
+      {/* <div className="w-full"> */}
+      <CornerBox>
+        <Image
+          src={project.image}
+          alt={project.name}
+          width={500}
+          height={300}
+          className="w-full h-69.5 md:h-82 xl:h-94.5 object-cover object-center"
+        />
+        <div className="absolute flex justify-center items-center inset-0 lg:opacity-0 lg:hover:opacity-100 bg-primary/5 lg:bg-primary/16">
+          <BtnPrimary text="VIEW PROJECT" />
+        </div>
+      </CornerBox>
+      {/* </div> */}
+      <div>
+        <h5 className="mb-4">{project.name}</h5>
+        <p>{project.description}</p>
+      </div>
+    </div>
+  );
+}
 
 export default function Projects() {
   return (
@@ -21,90 +50,12 @@ export default function Projects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-25 text-center md:text-start">
-        <div className="flex flex-col gap-6">
-          <div className="w-full">
-            <CornerBox>
-              <Image
-                src="/images/laptop.jpg"
-                alt="Fabrix Project"
-                width={500}
-                height={300}
-                className="w-full h-69.5 md:h-82 xl:h-94.5 object-cover object-center"
-              />
-            </CornerBox>
-          </div>
-          <div>
-            <h5 className="mb-4">Fabrix</h5>
-            <p>
-              A construction firm seeking a modern corporate website to
-              strengthen credibility, showcase large-scale projects, and support
-              business growth.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col gap-6">
-          <div className="w-full">
-            <CornerBox>
-              <Image
-                src="/images/laptop.jpg"
-                alt="Fabrix Project"
-                width={500}
-                height={300}
-                className="w-full h-69.5 md:h-82 xl:h-94.5 object-cover object-center"
-              />
-            </CornerBox>
-          </div>
-          <div>
-            <h5 className="mb-4">Taskpad</h5>
-            <p>
-              A SaaS product leveraging AI to automate task prioritization and
-              workflow management for distributed teams.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-6">
-          <div className="w-full">
-            <CornerBox>
-              <Image
-                src="/images/laptop.jpg"
-                alt="Fabrix Project"
-                width={500}
-                height={300}
-                className="w-full h-69.5 md:h-82 xl:h-94.5 object-cover object-center"
-              />
-            </CornerBox>
-          </div>
-          <div>
-            <h5 className="mb-4">Fabrix</h5>
-            <p>
-              A construction firm seeking a modern corporate website to
-              strengthen credibility, showcase large-scale projects, and support
-              business growth.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col gap-6">
-          <div className="w-full">
-            <CornerBox>
-              <Image
-                src="/images/laptop.jpg"
-                alt="Fabrix Project"
-                width={500}
-                height={300}
-                className="w-full h-69.5 md:h-82 xl:h-94.5 object-cover object-center"
-              />
-            </CornerBox>
-          </div>
-          <div>
-            <h5 className="mb-4">Taskpad</h5>
-            <p>
-              A SaaS product leveraging AI to automate task prioritization and
-              workflow management for distributed teams.
-            </p>
-          </div>
-        </div>
+        {PROJECTS.map((project, index) => (
+          <ProjectItem key={index} project={project} />
+        ))}
       </div>
+
+      <BtnPrimary text="VIEW ALL PROJECTS" svg=" " />
     </GridLine>
   );
 }

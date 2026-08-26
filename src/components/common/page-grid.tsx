@@ -71,7 +71,7 @@ export function PageGrid() {
 export function GreenGridBar({ className }: { className?: string }) {
   return (
     <GridLine markers className={className}>
-      <div className="h-9 border-y border-green-500/10 bg-black bg-[repeating-linear-gradient(90deg,rgba(34,197,94,0.12)_0px,rgba(34,197,94,0.12)_2px,transparent_2px,transparent_7px)]" />
+      <div className="h-9 border-y border-green-500/10 bg-[repeating-linear-gradient(90deg,rgba(34,197,94,0.12)_0px,rgba(34,197,94,0.12)_2px,transparent_2px,transparent_7px)]" />
     </GridLine>
   );
 }

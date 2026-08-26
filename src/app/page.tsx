@@ -8,7 +8,7 @@ import Projects from "@/components/home/projects";
 
 export default function Home() {
   return (
-    <main className="w-full bg-black text-white">
+    <main className="w-full bg-background text-white">
       <Hero />
       <BrandLogos />
       <About />
