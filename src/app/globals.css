@@ -27,6 +27,20 @@
   --background-image-hero-pattern: url("/globe-new-2.webp");
 }
 
+@layer base {
+  p {
+    @apply text-secondary-text;
+  }
+
+  h2 {
+    @apply font-primary text-foreground text-[38px]/[43.7px] md:text-[44px]/[50.6px] xl:text-[52px]/[50.6px] font-medium;
+  }
+
+  h5 {
+    @apply font-primary text-foreground text-[20px]/[26.6px] md:text-[22px]/[29.26px] xl:text-[24px]/[31.92px] font-medium;
+  }
+}
+
 *,
 *::before,
 *::after {

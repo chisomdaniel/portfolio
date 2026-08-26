@@ -13,13 +13,13 @@ export default function About() {
     >
       <div className="flex flex-col gap-5">
         <Eyebrow title="ABOUT" />
-        <h2 className="font-primary text-foreground text-[38px]/[43.7px] md:text-[44px]/[50.6px] lg:text-[52px]/[50.6px] font-medium">
+        <h2 className="font-primary text-foreground text-[38px]/[43.7px] md:text-[44px]/[50.6px] xl:text-[52px]/[50.6px] font-medium">
           Specializing in modern web technologies, I turn complex ideas into
           fast, reliable, and maintainable applications.
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 text-secondary-text">
-        <div className="md:col-span-2 lg:col-span-1 flex gap-6 flex-wrap items-end lg:items-start lg:flex-col justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14 text-secondary-text">
+        <div className="md:col-span-2 xl:col-span-1 flex gap-6 flex-wrap items-end xl:items-start xl:flex-col justify-between">
           <p className="max-w-90">
             I specialize in system architecture and scalable web engineering.
             From backend services to frontend performance, I approach
@@ -34,7 +34,7 @@ export default function About() {
               alt="Profile Picture"
               width={400}
               height={500}
-              className="w-full h-87.5 lg:h-125 object-cover object-center"
+              className="w-full h-87.5 xl:h-125 object-cover object-center"
             />
           </CornerBox>
         </div>
