@@ -5,6 +5,7 @@ import BrandLogos from "@/components/home/brand-logos";
 import About from "@/components/home/about";
 import { GreenGridBar } from "@/components/common/page-grid";
 import Projects from "@/components/home/projects";
+import Skills from "@/components/home/skills";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <GreenGridBar className="z-30 overflow-hidden" />
       <Projects />
+      <Skills />
       <h1>Home Page</h1>
     </main>
   );

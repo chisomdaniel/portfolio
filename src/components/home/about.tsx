@@ -9,7 +9,7 @@ export default function About() {
   return (
     <GridLine
       markers
-      className="px-10 py-15 lg:px-20 lg:py-30 flex flex-col gap-12 lg:gap-18 bg-background"
+      className="px-10 py-15 lg:px-20 lg:py-30 flex flex-col gap-12 lg:gap-18"
     >
       <div className="flex flex-col gap-5">
         <Eyebrow title="ABOUT" />

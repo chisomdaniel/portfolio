@@ -39,6 +39,10 @@
   h5 {
     @apply font-primary text-foreground text-[20px]/[26.6px] md:text-[22px]/[29.26px] xl:text-[24px]/[31.92px] font-medium;
   }
+
+  h6 {
+    @apply font-secondary text-[18px]/[24.48px] md:text-[20px]/[27.2px] xl:text-[22px]/[29.92px] font-normal;
+  }
 }
 
 *,

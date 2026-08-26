@@ -5,11 +5,7 @@ import CornerBox from "../common/corner-box";
 import BtnPrimary from "../common/btn-primary";
 import { PROJECTS } from "../../data/projects.data";
 
-export function ProjectItem({
-  project,
-}: {
-  project: (typeof PROJECTS)[number];
-}) {
+function ProjectItem({ project }: { project: (typeof PROJECTS)[number] }) {
   return (
     <div className="flex flex-col gap-6">
       {/* <div className="w-full"> */}
