@@ -23,23 +23,25 @@ function ArticleCard({
   date: string;
 }) {
   return (
-    <div className="flex flex-col h-full bg-green-light-a border border-green-a">
-      <div className="relative w-full aspect-3/2 shrink-0">
-        <Image
-          src={imageURL}
-          alt={title}
-          // width={400}
-          // height={250}
-          fill
-          className="object-center object-cover"
-        />
-        <span className="absolute top-4 left-4 px-2 py-1 text-background bg-primary">
-          {category}
-        </span>
+    <div className="group flex flex-col h-full bg-green-light-a border border-green-a">
+      <div className="relative w-full aspect-3/2 shrink-0 overflow-hidden">
+        <Link href={link}>
+          <Image
+            src={imageURL}
+            alt={title}
+            // width={400}
+            // height={250}
+            fill
+            className="object-center object-cover group-hover:scale-105 group-hover:rotate-3 transition-transform duration-400"
+          />
+          <span className="absolute top-4 left-4 px-2 py-1 text-background bg-primary">
+            {category}
+          </span>
+        </Link>
       </div>
 
       <div className="p-8 pt-6 flex-1 flex flex-col">
-        <h5 className="mb-4">
+        <h5 className="mb-4 group-hover:text-primary transition-colors duration-0">
           <Link href={link}>{title}</Link>
         </h5>
 

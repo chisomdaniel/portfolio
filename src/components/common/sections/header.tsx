@@ -48,6 +48,7 @@ export default function Header() {
               </span>
             </Link>
           </div>
+
           {/* for tablet and mobile */}
           <div
             tabIndex={0}

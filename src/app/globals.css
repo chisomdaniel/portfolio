@@ -28,6 +28,15 @@
 }
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      opacity 0.3s ease;
+  }
+
   p {
     @apply text-secondary-text;
   }
@@ -43,15 +52,6 @@
   h6 {
     @apply font-secondary text-[18px]/[24.48px] md:text-[20px]/[27.2px] xl:text-[22px]/[29.92px] font-normal;
   }
-}
-
-*,
-*::before,
-*::after {
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    opacity 0.3s ease;
 }
 
 body {
