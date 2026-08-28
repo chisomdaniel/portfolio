@@ -1,7 +1,7 @@
 :root {
   --page-inset: 20px;
 
-  --background: #0a0a0a;
+  --background: rgb(10, 10, 10);
   --foreground: #fbfbf6;
   --color-primary: #7fee64;
   /* --color-secondary: #fbfbf6; */

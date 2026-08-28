@@ -6,6 +6,7 @@ import About from "@/components/home/about";
 import { GreenGridBar } from "@/components/common/page-grid";
 import Projects from "@/components/home/projects";
 import Skills from "@/components/home/skills";
+import Articles from "@/components/home/articles";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <GreenGridBar className="z-30 overflow-hidden" />
       <Projects />
       <Skills />
+      <Articles />
       <h1>Home Page</h1>
     </main>
   );
