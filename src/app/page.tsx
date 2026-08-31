@@ -7,6 +7,7 @@ import { GreenGridBar } from "@/components/common/page-grid";
 import Projects from "@/components/home/projects";
 import Skills from "@/components/home/skills";
 import Articles from "@/components/home/articles";
+import Footer from "@/components/common/sections/footer";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Articles />
-      <h1>Home Page</h1>
+      <Footer />
     </main>
   );
 }

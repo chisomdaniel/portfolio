@@ -4,7 +4,7 @@ import { GridLine } from "@/components/common/page-grid";
 export default function Header() {
   return (
     <GridLine>
-      <header className="flex font-medium justify-between items-center shrink-0 py-6 px-14 text-foreground text-[16px]">
+      <header className="flex font-medium justify-between items-center shrink-0 py-5 px-10 xl:py-6 xl:px-14 text-foreground text-[16px]">
         <Link href="/">
           <h1 className="text-5xl font-bold">
             D<span className="text-primary">.</span>

@@ -4,7 +4,7 @@ type GridMarderProps = {
   side: "left" | "right";
 };
 
-function GridMarker({ side }: GridMarderProps) {
+export function GridMarker({ side }: GridMarderProps) {
   return (
     <span
       className={cn(
