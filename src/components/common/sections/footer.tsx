@@ -34,7 +34,11 @@ export default function Footer() {
       <div className="grid grid-cols-1 xl:grid-cols-2 justify-items-stretch px-5 xl:px-10">
         {" "}
         {/* // flex flex-col xl:flex-row */}
-        <div className="flex-1 flex flex-col gap-6 pt-15 px-5 md:pr-0 xl:pt-30 xl:pl-10 border-r border-line-color">
+        <div className="relative flex-1 flex flex-col gap-6 pt-15 px-5 md:pr-0 xl:pt-30 xl:pl-10 border-r border-line-color">
+          {/* grid markers */}
+          <GridMarker side="right" className="right-0" />
+          {/* end of markers */}
+
           <Link href="/">
             <h1 className="text-5xl font-bold">
               D<span className="text-primary">.</span>

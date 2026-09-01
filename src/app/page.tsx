@@ -18,6 +18,7 @@ export default function Home() {
       <GreenGridBar className="z-30 overflow-hidden" />
       <Projects />
       <Skills />
+      <GreenGridBar className="z-30 overflow-hidden" />
       <Articles />
       <Footer />
     </main>

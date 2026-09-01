@@ -2,9 +2,10 @@ import { cn } from "@/utils/cn";
 
 type GridMarderProps = {
   side: "left" | "right";
+  className?: string;
 };
 
-export function GridMarker({ side }: GridMarderProps) {
+export function GridMarker({ side, className }: GridMarderProps) {
   return (
     <span
       className={cn(
@@ -12,6 +13,7 @@ export function GridMarker({ side }: GridMarderProps) {
         side === "left"
           ? "left-(--page-inset) -translate-x-1/2"
           : "right-(--page-inset) translate-x-1/2",
+        className,
       )}
     >
       <span className="absolute left-1/2 top-1/2 h-1 w-1 outline-black outline-2 -translate-x-1/2 -translate-y-1/2 bg-line-color"></span>
@@ -71,7 +73,9 @@ export function PageGrid() {
 export function GreenGridBar({ className }: { className?: string }) {
   return (
     <GridLine markers className={className}>
-      <div className="h-9 border-y border-green-500/10 bg-[repeating-linear-gradient(90deg,rgba(34,197,94,0.12)_0px,rgba(34,197,94,0.12)_2px,transparent_2px,transparent_7px)]" />
+      {" "}
+      {/* rgba(34,197,94,0.12) */}
+      <div className="h-9 border-y border-green-500/10 bg-[repeating-linear-gradient(90deg,rgba(34,197,94,0.12)_0px,rgba(34,197,94,0.12)_2px,var(--background)_2px,var(--background)_7px)]" />
     </GridLine>
   );
 }
