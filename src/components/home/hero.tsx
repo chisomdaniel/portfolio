@@ -7,10 +7,10 @@ export default function Hero() {
   return (
     <GridLine
       markers={true}
-      className="min-h-162.5 xl:min-h-screen p-10 xl:p-20 xl:pt-10 bg-background bg-hero-pattern bg-center bg-cover bg-no-repeat overlay"
+      className="overflow-hidden min-h-162.5 xl:min-h-screen p-10 xl:p-20 xl:pt-10 bg-background bg-hero-pattern bg-center bg-cover bg-no-repeat overlay"
     >
       {/* overlay */}
-      <div className="absolute inset-0 bg-background/30" />
+      <div className="z-1 absolute inset-0 bg-background/50" />
 
       <video
         autoPlay
@@ -18,7 +18,7 @@ export default function Hero() {
         loop
         playsInline
         poster="/globe-new-2.webp"
-        className="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none"
+        className="absolute top-0 left-0 w-full h-full object-cover md:scale-115 z-0 pointer-events-none"
       >
         <source src="/video/globe-video.mp4" type="video/mp4" />
         Browser does not support the video tag.
