@@ -4,10 +4,11 @@ import Image from "next/image";
 import CornerBox from "../common/corner-box";
 import BtnPrimary from "../common/btn-primary";
 import { PROJECTS } from "../../data/projects.data";
+import { H2, P, ChildDiv } from "../common/motion";
 
 function ProjectItem({ project }: { project: (typeof PROJECTS)[number] }) {
   return (
-    <div className="flex flex-col gap-6">
+    <ChildDiv className="flex flex-col gap-6">
       {/* <div className="w-full"> */}
       <CornerBox>
         <Image
@@ -26,7 +27,7 @@ function ProjectItem({ project }: { project: (typeof PROJECTS)[number] }) {
         <h5 className="mb-4">{project.name}</h5>
         <p>{project.description}</p>
       </div>
-    </div>
+    </ChildDiv>
   );
 }
 
@@ -38,11 +39,11 @@ export default function Projects() {
     >
       <div className="flex flex-col gap-5 xl:w-185 text-center">
         <Eyebrow title="SELECTED WORKS" />
-        <h2>Selected Projects Where Architecture Meets Execution</h2>
-        <p>
+        <H2>Selected Projects Where Architecture Meets Execution</H2>
+        <P>
           A selection of projects demonstrating scalable system design,
           performance optimization, and production-level engineering leadership.
-        </p>
+        </P>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-25 text-center md:text-start">
@@ -51,7 +52,9 @@ export default function Projects() {
         ))}
       </div>
 
-      <BtnPrimary text="VIEW ALL PROJECTS" svg=" " />
+      <ChildDiv>
+        <BtnPrimary text="VIEW ALL PROJECTS" svg=" " />
+      </ChildDiv>
     </GridLine>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Links, Resources } from "@/data/links.data";
 import { ArrowRight } from "lucide-react";
 import { SOCIALS } from "@/data/socials";
+import { ParentDiv, ChildDiv, H6, P, Li } from "../motion";
 
 function SocialLink({
   link,
@@ -12,14 +13,16 @@ function SocialLink({
   children: React.ReactNode;
 }) {
   return (
-    <Link
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group h-14.5 p-4 flex justify-center items-center border-r border-t border-line-color hover:bg-primary"
-    >
-      {children}
-    </Link>
+    <ChildDiv>
+      <Link
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group h-14.5 p-4 flex justify-center items-center border-r border-t border-line-color hover:bg-primary"
+      >
+        {children}
+      </Link>
+    </ChildDiv>
   );
 }
 
@@ -31,68 +34,67 @@ export default function Footer() {
       <GridMarker side="right" />
       {/* end of markers */}
 
-      <div className="grid grid-cols-1 xl:grid-cols-2 justify-items-stretch px-5 xl:px-10">
+      <ParentDiv className="grid grid-cols-1 xl:grid-cols-2 justify-items-stretch px-5 xl:px-10">
         {" "}
         {/* // flex flex-col xl:flex-row */}
         <div className="relative flex-1 flex flex-col gap-6 pt-15 px-5 md:pr-0 xl:pt-30 xl:pl-10 border-r border-line-color">
           {/* grid markers */}
           <GridMarker side="right" className="right-0" />
           {/* end of markers */}
+          <ChildDiv>
+            <Link href="/">
+              <h1 className="text-5xl font-bold">
+                D<span className="text-primary">.</span>
+              </h1>
+            </Link>
+          </ChildDiv>
 
-          <Link href="/">
-            <h1 className="text-5xl font-bold">
-              D<span className="text-primary">.</span>
-            </h1>
-          </Link>
-
-          <p className="max-w-140 xl:max-w-87.5">
+          <P className="max-w-140 xl:max-w-87.5">
             Senior Software Engineer focused on scalable architecture,
             performance optimization, and disciplined execution.
-          </p>
+          </P>
         </div>
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 justify-items-stretch py-10 px-5 xl:px-10 gap-6">
           <div className="flex flex-col gap-6 md:w-65">
-            <h6 className="font-primary font-medium text-[18px]/[25.2px] md:text-[20px]/[28px]">
+            <H6 className="font-primary font-medium text-[18px]/[25.2px] md:text-[20px]/[28px]">
               Navigation:
-            </h6>
-            <div>
-              <ul className="flex flex-col gap-2">
-                {Links.map((value, idx) => (
-                  <li key={idx}>
-                    <Link
-                      href={value.link}
-                      className="flex justify-between items-center p-2 text-secondary-text hover:bg-primary hover:text-background duration-500"
-                    >
-                      <span className="text-[14px]">{value.name}</span>
-                      <ArrowRight size={16} strokeWidth={3} />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            </H6>
+
+            <ul className="flex flex-col gap-2">
+              {Links.map((value, idx) => (
+                <Li key={idx}>
+                  <Link
+                    href={value.link}
+                    className="flex justify-between items-center p-2 text-secondary-text hover:bg-primary hover:text-background duration-500"
+                  >
+                    <span className="text-[14px]">{value.name}</span>
+                    <ArrowRight size={16} strokeWidth={3} />
+                  </Link>
+                </Li>
+              ))}
+            </ul>
           </div>
           <div className="flex flex-col gap-6 md:w-65">
-            <h6 className="font-primary font-medium text-[18px]/[25.2px] md:text-[20px]/[28px]">
+            <H6 className="font-primary font-medium text-[18px]/[25.2px] md:text-[20px]/[28px]">
               Resources:
-            </h6>
-            <div>
-              <ul className="flex flex-col gap-2">
-                {Resources.map((value, idx) => (
-                  <li key={idx}>
-                    <Link
-                      href={value.link}
-                      className="flex justify-between items-center p-2 text-secondary-text hover:bg-primary hover:text-background"
-                    >
-                      <span className="text-[14px]">{value.name}</span>
-                      <ArrowRight size={16} strokeWidth={3} />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            </H6>
+
+            <ul className="flex flex-col gap-2">
+              {Resources.map((value, idx) => (
+                <Li key={idx}>
+                  <Link
+                    href={value.link}
+                    className="flex justify-between items-center p-2 text-secondary-text hover:bg-primary hover:text-background"
+                  >
+                    <span className="text-[14px]">{value.name}</span>
+                    <ArrowRight size={16} strokeWidth={3} />
+                  </Link>
+                </Li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
+      </ParentDiv>
 
       <GridLine
         markers
@@ -100,7 +102,7 @@ export default function Footer() {
         className="px-5 xl:px-10 grid grid-cols-1 md:grid-cols-2 justify-items-stretch"
       >
         <div className="order-1 md:order-0 flex items-center justify-center md:justify-start p-5 md:p-0 md:pl-10 border-t border-r border-line-color">
-          <p>© 2026 – Built by Me</p>
+          <P>© 2026 – Built by Me</P>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4">
           <SocialLink link={SOCIALS.github}>

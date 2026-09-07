@@ -1,4 +1,7 @@
+"use client";
 import { cn } from "@/utils/cn";
+import { containerVariants } from "@/providers/motion";
+import { motion } from "motion/react";
 
 type GridMarderProps = {
   side: "left" | "right";
@@ -35,7 +38,11 @@ export function GridLine({
   bottomBorder = true,
 }: GridLineProps) {
   return (
-    <div
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
       className={cn(
         "relative",
         bottomBorder && "border-b border-line-color",
@@ -49,7 +56,7 @@ export function GridLine({
         </>
       )}
       {children}
-    </div>
+    </motion.div>
   );
 }
 

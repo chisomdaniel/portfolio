@@ -1,9 +1,10 @@
 import { GridLine } from "../common/page-grid";
 import Eyebrow from "../common/eyebrow";
 import CornerBox from "../common/corner-box";
+import { H2, P, ChildDiv } from "../common/motion";
 
 function SkillItem({ children }: { children: React.ReactNode }) {
-  return <div className="flex flex-col gap-10">{children}</div>;
+  return <ChildDiv className="flex flex-col gap-10">{children}</ChildDiv>;
 }
 
 function SvgBox({ children }: { children: React.ReactNode }) {
@@ -22,11 +23,11 @@ export default function Skills() {
     >
       <div className="flex flex-col shrink-0 gap-5 xl:w-85">
         <Eyebrow title="TECHNICAL EXPERTISE" />
-        <h2>Built Across the Full Stack</h2>
-        <p>
+        <H2>Built Across the Full Stack</H2>
+        <P>
           My expertise spans frontend systems, backend architectjre,
           infrastructure, and performance optimization.
-        </p>
+        </P>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-x-4 xl:gap-y-20">
         <SkillItem>

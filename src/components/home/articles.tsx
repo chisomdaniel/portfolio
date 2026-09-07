@@ -6,6 +6,7 @@ import Image from "next/image";
 import Pill from "../common/pill";
 import { UserRound, CalendarDays } from "lucide-react";
 import Link from "next/link";
+import { H2, P, ChildDiv } from "../common/motion";
 
 function ArticleCard({
   title,
@@ -23,7 +24,7 @@ function ArticleCard({
   date: string;
 }) {
   return (
-    <div className="group flex flex-col h-full bg-green-light-a border border-green-a">
+    <ChildDiv className="group flex flex-col h-full bg-green-light-a border border-green-a">
       <div className="relative w-full aspect-3/2 shrink-0 overflow-hidden">
         <Link href={link}>
           <Image
@@ -51,7 +52,7 @@ function ArticleCard({
           <Pill svg={<CalendarDays size={16} />} text={date} />
         </div>
       </div>
-    </div>
+    </ChildDiv>
   );
 }
 
@@ -63,12 +64,12 @@ export default function Articles() {
     >
       <div className="flex flex-col gap-5 xl:w-185 text-center">
         <Eyebrow title="KNOWLEDGE SHARE" />
-        <h2>Top Articles Written by Me</h2>
-        <p>
+        <H2>Top Articles Written by Me</H2>
+        <P>
           Giving back to the community through insightful articles on software
           engineering, architecture, and best practices. Explore my latest
           writings and stay updated with industry trends.
-        </p>
+        </P>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {ARTICLES.slice(0, 3).map((article, index) => (
@@ -84,7 +85,9 @@ export default function Articles() {
         ))}
       </div>
 
-      <BtnPrimary text="VIEW ALL ARTICLES" svg=" " />
+      <ChildDiv>
+        <BtnPrimary text="VIEW ALL ARTICLES" svg=" " />
+      </ChildDiv>
     </GridLine>
   );
 }
