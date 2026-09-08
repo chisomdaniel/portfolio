@@ -35,7 +35,7 @@ export default function Hero() {
 
           <ChildDiv className="max-w-82.5 md:max-w-125 flex flex-col items-center xl:items-start gap-10">
             <CornerBox className="p-4 border border-green-a bg-green-light-a/30">
-              <p className="text-center xl:text-start text-[18px] md:text-[20px] xl:text-[22px] leading-6 md:leading-6.75 xl:leading-7.5">
+              <p className="text-center text-foreground xl:text-start text-[18px] md:text-[20px] xl:text-[22px] leading-6 md:leading-6.75 xl:leading-7.5">
                 Hi, I&apos;m Daniel. Specializing in modern web technologies, I
                 turn complex ideas into fast, reliable, and maintainable
                 applications.

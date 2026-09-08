@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/common/sections/header";
 import { Instrument_Sans, Inter } from "next/font/google";
 import { PageGrid } from "@/components/common/page-grid";
+import Footer from "@/components/common/sections/footer";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <PageGrid />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

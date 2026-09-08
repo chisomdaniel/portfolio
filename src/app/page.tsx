@@ -7,7 +7,6 @@ import { GreenGridBar } from "@/components/common/page-grid";
 import Projects from "@/components/home/projects";
 import Skills from "@/components/home/skills";
 import Articles from "@/components/home/articles";
-import Footer from "@/components/common/sections/footer";
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
       <Skills />
       <GreenGridBar className="z-30 overflow-hidden" />
       <Articles />
-      <Footer />
     </main>
   );
 }
