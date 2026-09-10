@@ -15,6 +15,10 @@ export const Links = [
     name: "Blog",
     link: "/blog",
   },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
 ];
 
 export const Resources = [

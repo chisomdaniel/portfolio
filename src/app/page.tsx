@@ -7,6 +7,7 @@ import { GreenGridBar } from "@/components/common/page-grid";
 import Projects from "@/components/home/projects";
 import Skills from "@/components/home/skills";
 import Articles from "@/components/home/articles";
+import ExperienceSection from "@/components/home/experience";
 
 export default function Home() {
   return (
@@ -14,10 +15,12 @@ export default function Home() {
       <Hero />
       <BrandLogos />
       <About />
-      <GreenGridBar className="z-30 overflow-hidden" />
+      <GreenGridBar />
       <Projects />
+      <ExperienceSection />
+      <GreenGridBar />
       <Skills />
-      <GreenGridBar className="z-30 overflow-hidden" />
+      <GreenGridBar />
       <Articles />
     </main>
   );
