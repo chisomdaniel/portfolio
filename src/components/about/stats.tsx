@@ -14,7 +14,7 @@ export default function StatsSection() {
       <CornerBox className="flex-1 min-h-87.5">
         <Image
           src="/images/person-working.png"
-          alt="stats background"
+          alt="person working"
           fill
           className="object-cover object-center"
         />

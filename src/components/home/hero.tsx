@@ -42,7 +42,7 @@ export default function Hero() {
               </p>
             </CornerBox>
 
-            <BtnPrimary text="VIEW PROJECTS" />
+            <BtnPrimary text="VIEW PROJECTS" url="/projects" />
           </ChildDiv>
         </div>
       </div>

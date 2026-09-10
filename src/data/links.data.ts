@@ -12,8 +12,8 @@ export const Links = [
     link: "/projects",
   },
   {
-    name: "Experiences",
-    link: "/experiences",
+    name: "Blog",
+    link: "/blog",
   },
 ];
 

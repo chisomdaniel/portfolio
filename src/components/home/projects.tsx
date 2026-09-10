@@ -19,7 +19,7 @@ function ProjectItem({ project }: { project: (typeof PROJECTS)[number] }) {
           className="w-full h-69.5 md:h-82 xl:h-94.5 object-cover object-center"
         />
         <div className="absolute flex justify-center items-center inset-0 lg:opacity-0 lg:hover:opacity-100 bg-primary/5 lg:bg-primary/16">
-          <BtnPrimary text="VIEW PROJECT" />
+          <BtnPrimary text="VIEW PROJECT" url="#" />
         </div>
       </CornerBox>
       {/* </div> */}
@@ -53,7 +53,7 @@ export default function Projects() {
       </div>
 
       <ChildDiv>
-        <BtnPrimary text="VIEW ALL PROJECTS" svg=" " />
+        <BtnPrimary text="VIEW ALL PROJECTS" svg=" " url="/projects" />
       </ChildDiv>
     </GridLine>
   );

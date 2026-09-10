@@ -3,14 +3,16 @@ import { ArrowRight } from "lucide-react";
 
 export default function BtnPrimary({
   text,
+  url,
   svg = null,
 }: {
   text: string;
+  url: string;
   svg?: React.ReactNode;
 }) {
   return (
     <Link
-      href="/projects"
+      href={url}
       className="group flex gap-10 items-center w-fit font-semibold hover:bg-green-light-a px-4 py-3 border border-primary hover:border-green-light-b bg-primary text-black hover:text-primary stroke-black hover:stroke-primary"
     >
       <span>{text}</span>

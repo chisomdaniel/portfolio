@@ -1,6 +1,6 @@
 import { GridLine } from "../common/page-grid";
 import Eyebrow from "../common/eyebrow";
-import BtnPrimary from "../common/btn-primary";
+// import BtnPrimary from "../common/btn-primary";
 import { ARTICLES } from "../../data/articles.data";
 import Image from "next/image";
 import Pill from "../common/pill";
@@ -56,7 +56,7 @@ function ArticleCard({
   );
 }
 
-export default function Articles() {
+export default function ArticlesSection() {
   return (
     <GridLine
       markers
@@ -72,7 +72,7 @@ export default function Articles() {
         </P>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-        {ARTICLES.slice(0, 3).map((article, index) => (
+        {ARTICLES.map((article, index) => (
           <ArticleCard
             key={index}
             title={article.title}
@@ -85,9 +85,9 @@ export default function Articles() {
         ))}
       </div>
 
-      <ChildDiv>
-        <BtnPrimary text="VIEW ALL ARTICLES" svg=" " url="/blog" />
-      </ChildDiv>
+      {/* <ChildDiv>
+        <BtnPrimary text="VIEW ALL ARTICLES" svg=" " />
+      </ChildDiv> */}
     </GridLine>
   );
 }

@@ -46,7 +46,7 @@ export default function AboutSection() {
             decision-making that supports product growth. I believe strong
             engineering is defined not just by delivery, but by durability.
           </p>
-          <BtnPrimary text="LEARN MORE" />
+          <BtnPrimary text="SEE EXPERIENCES" url="/#experiences" />
         </ChildDiv>
       </div>
     </GridLine>
