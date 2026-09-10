@@ -45,7 +45,10 @@ export default function ExperienceSection() {
       markers
       className="py-15 px-5 md:px-10 xl:px-20 xl:py-30 flex flex-col gap-10 xl:gap-20"
     >
-      <div className="flex flex-col items-center gap-5 text-center">
+      <div
+        id="experience"
+        className="flex flex-col items-center gap-5 text-center"
+      >
         <Eyebrow title="CAREER JOURNEY" />
         <H2>My Professional Experience</H2>
         <P className="max-w-125">
