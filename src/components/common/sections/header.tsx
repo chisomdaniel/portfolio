@@ -5,10 +5,17 @@ import { motion } from "motion/react";
 import { navItemVariants } from "@/providers/motion";
 import MobileNav from "../mobile-nav";
 import { useState } from "react";
+import { Links } from "@/data/links.data";
+import { cn } from "@/utils/cn";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+  const segments = pathname.split("/");
+  const mainRoute = segments[1] ? `/${segments[1]}` : "/";
+
   const [isOpen, setIsOpen] = useState(false);
-  const [isActive, setIsActive] = useState("Home");
+  const [isActive, setIsActive] = useState(mainRoute);
 
   return (
     <>
@@ -28,25 +35,24 @@ export default function Header() {
             </Link>
           </motion.div>
 
+          {/* desktop nav bar */}
           <motion.ul
             variants={navItemVariants}
             className="hidden xl:flex absolute left-1/2 -translate-x-1/2 gap-6"
           >
-            <Link className="text-primary" href="/">
-              <li>HOME</li>
-            </Link>
-            <Link className="hover:text-primary" href="/about">
-              <li>ABOUT</li>
-            </Link>
-            <Link className="hover:text-primary" href="/contact">
-              <li>CONTACT</li>
-            </Link>
-            <Link className="hover:text-primary" href="/projects">
-              <li>PROJECTS</li>
-            </Link>
-            <Link className="hover:text-primary" href="/blog">
-              <li>BLOG</li>
-            </Link>
+            {Links.map((link) => (
+              <Link
+                key={link.name}
+                href={link.link}
+                className={cn(
+                  "hover:text-primary",
+                  isActive === link.link && "text-primary",
+                )}
+                onClick={() => setIsActive(link.link)}
+              >
+                <li>{link.name.toUpperCase()}</li>
+              </Link>
+            ))}
           </motion.ul>
           <motion.div
             variants={navItemVariants}
