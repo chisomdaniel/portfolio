@@ -46,7 +46,10 @@ export default function MobileNav({
                     "block text-white text-[16px] font-medium uppercase pl-4.5 pr-4 pt-2 pb-2 hover:text-primary focus:text-primary",
                     isActive === link.link && "text-primary",
                   )}
-                  onClick={() => setIsActive(link.link)}
+                  onClick={() => {
+                    setIsActive(link.link);
+                    setIsOpen(false);
+                  }}
                 >
                   {link.name}
                 </Link>
