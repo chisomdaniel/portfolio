@@ -1,4 +1,3 @@
-"use client";
 import { GridLine } from "@/components/common/page-grid";
 import Eyebrow from "../common/eyebrow";
 import { H2, P } from "../common/motion";
@@ -6,8 +5,7 @@ import { H2, P } from "../common/motion";
 import Image from "next/image";
 import { Testimonials as testimonialsData } from "@/data/testimonials.data";
 import { Star } from "lucide-react";
-import { forwardRef, useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import InteractiveCardSlider from "../common/cardSlider";
 
 type ReviewCardProps = {
   id: number;
@@ -16,65 +14,38 @@ type ReviewCardProps = {
   reviewer: { image: string; name: string; role: string };
 };
 
-const ReviewCard = forwardRef<HTMLDivElement, ReviewCardProps>(
-  function ReviewCard({ id, rating, review, reviewer }, ref) {
-    return (
-      <motion.div
-        ref={ref}
-        key={id}
-        initial={{ x: "105%", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: "-105%", opacity: 1 }}
-        transition={{ ease: "easeInOut", duration: 0.8 }}
-        className="border border-green-a bg-green-light-a p-7.5"
-      >
-        <div className="flex gap-1.5 mb-6">
-          {Array.from({ length: rating }).map((_, index) => (
-            <Star
-              key={index}
-              className="w-4.5 h-4.5 text-yellow-500 fill-yellow-500"
-            />
-          ))}
-        </div>
-        <div className="mb-7.5">
-          <p className="text-white text-[18px]/[25px]">
-            &rdquo;{review}&rdquo;
-          </p>
-        </div>
-        <div className="flex gap-5 items-center">
-          <Image
-            src={reviewer.image}
-            alt={reviewer.name}
-            width={50}
-            height={50}
-            className="rounded-full object-cover object-center"
+function ReviewCard({ id, rating, review, reviewer }: ReviewCardProps) {
+  return (
+    <div key={id} className="border border-green-a bg-green-light-a p-7.5">
+      <div className="flex gap-1.5 mb-6">
+        {Array.from({ length: rating }).map((_, index) => (
+          <Star
+            key={index}
+            className="w-4.5 h-4.5 text-yellow-500 fill-yellow-500"
           />
-          <div className="flex flex-col justify-between">
-            <h5 className="text-[18px]">{reviewer.name}</h5>
-            <p className="text-[14px]">{reviewer.role}</p>
-          </div>
+        ))}
+      </div>
+      <div className="mb-7.5">
+        <p className="text-white text-[18px]/[25px]">&rdquo;{review}&rdquo;</p>
+      </div>
+      <div className="flex gap-5 items-center">
+        <Image
+          src={reviewer.image}
+          alt={reviewer.name}
+          width={50}
+          height={50}
+          className="rounded-full object-cover object-center"
+        />
+        <div className="flex flex-col justify-between">
+          <h5 className="text-[18px]">{reviewer.name}</h5>
+          <p className="text-[14px]">{reviewer.role}</p>
         </div>
-      </motion.div>
-    );
-  },
-);
+      </div>
+    </div>
+  );
+}
 
 export default function Testimonials() {
-  const [index, setIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    if (isHovered) return;
-
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [isHovered]);
-
-  const currentCard = testimonialsData[index];
-
   return (
     <GridLine
       markers
@@ -90,21 +61,17 @@ export default function Testimonials() {
         {/* <BtnPrimary text="READ ALL REVIEWS" /> */}
       </div>
 
-      <div
-        className="relative flex-1 overflow-hidden"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <AnimatePresence mode="popLayout">
+      <InteractiveCardSlider className="flex-1" waitDuration={6000}>
+        {testimonialsData.map((testimonial, idx) => (
           <ReviewCard
-            id={index}
-            key={index}
-            rating={currentCard.rating}
-            review={currentCard.review}
-            reviewer={currentCard.reviewer}
+            key={idx}
+            id={idx}
+            rating={testimonial.rating}
+            review={testimonial.review}
+            reviewer={testimonial.reviewer}
           />
-        </AnimatePresence>
-      </div>
+        ))}
+      </InteractiveCardSlider>
     </GridLine>
   );
 }

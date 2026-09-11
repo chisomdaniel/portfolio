@@ -19,4 +19,14 @@ export const Testimonials = [
       image: "/images/testimonials/john-doe.png",
     },
   },
+  {
+    rating: 5,
+    review:
+      "Chukwusom is an excellent developer. He is always delivering high-quality work and is a pleasure to work with.",
+    reviewer: {
+      name: "Jane Smith",
+      role: "Product Manager",
+      image: "/images/testimonials/john-doe.png",
+    },
+  },
 ];

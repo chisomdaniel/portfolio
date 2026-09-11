@@ -7,6 +7,7 @@ import Pill from "../common/pill";
 import { UserRound, CalendarDays } from "lucide-react";
 import Link from "next/link";
 import { H2, P, ChildDiv } from "../common/motion";
+import InteractiveCardSlider from "../common/cardSlider";
 
 function ArticleCard({
   title,
@@ -71,7 +72,7 @@ export default function Articles() {
           writings and stay updated with industry trends.
         </P>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {ARTICLES.slice(0, 3).map((article, index) => (
           <ArticleCard
             key={index}
@@ -84,6 +85,20 @@ export default function Articles() {
           />
         ))}
       </div>
+
+      <InteractiveCardSlider className="w-full lg:hidden" waitDuration={3000}>
+        {ARTICLES.slice(0, 3).map((article, index) => (
+          <ArticleCard
+            key={index}
+            title={article.title}
+            imageURL={article.imageURL}
+            description={article.description}
+            link={article.link}
+            category={article.category}
+            date={article.date}
+          />
+        ))}
+      </InteractiveCardSlider>
 
       <ChildDiv>
         <BtnPrimary text="VIEW ALL ARTICLES" svg=" " url="/blog" />

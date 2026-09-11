@@ -17,7 +17,7 @@ export default function Hero() {
         muted={true}
         loop
         playsInline
-        poster="/globe-new-2.webp"
+        // poster="/globe-new-2.webp"
         className="absolute top-0 left-0 w-full h-full object-cover md:scale-115 z-0 pointer-events-none"
       >
         <source src="/video/globe-video.mp4" type="video/mp4" />
