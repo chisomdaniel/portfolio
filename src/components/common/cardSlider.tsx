@@ -39,12 +39,14 @@ export default function InteractiveCardSlider({
     if (isHovered) return;
 
     const interval = setInterval(() => {
-      const nextIndex = (index + 1) % children.length;
-      goToCard(nextIndex, 1); // auto-advance forward
+      setIndex(([currentIndex]) => [
+        (currentIndex + 1) % children.length,
+        1,
+      ]); // auto-advance forward
     }, waitDuration);
 
     return () => clearInterval(interval);
-  }, [index, isHovered, children.length, waitDuration]);
+  }, [isHovered, children.length, waitDuration]);
 
   const handleDragEnd = (event: TouchEvent, info: PanInfo) => {
     const swipThreshold = 50;
