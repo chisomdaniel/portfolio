@@ -35,6 +35,7 @@ function ArticleCard({
             // height={250}
             fill
             className="object-center object-cover group-hover:scale-105 group-hover:rotate-3 transition-transform duration-400"
+            draggable={false}
           />
           <span className="absolute top-4 left-4 px-2 py-1 text-background bg-primary">
             {category}
