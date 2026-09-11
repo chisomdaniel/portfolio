@@ -43,7 +43,7 @@ export default function MobileNav({
                 <Link
                   href={link.link}
                   className={cn(
-                    "block text-white text-[16px] font-medium uppercase pl-4.5 pr-4 pt-2 pb-2 hover:text-primary focus:text-primary",
+                    "block text-white text-[16px] font-medium uppercase pl-4.5 pr-4 pt-2 pb-2 hover:text-primary active:text-primary focus:text-primary",
                     isActive === link.link && "text-primary",
                   )}
                   onClick={() => {

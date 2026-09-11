@@ -19,11 +19,11 @@ export default function BrandLogos() {
           <Image
             src={logo.url}
             alt={logo.brandName}
-            className="h-10 w-full object-center object-contain group-hover:scale-120 transition-transform duration-300 ease-in-out"
+            className="h-10 w-full object-center object-contain group-hover:scale-120 group-active:scale-120 transition-transform duration-300 ease-in-out"
             width={150}
             height={40}
           />
-          <div className="absolute group-hover:opacity-0 top-0 left-0 w-full h-full bg-green-light-a mix-blend-hue pointer-events-none transition-opacity duration-300" />
+          <div className="absolute group-hover:opacity-0 group-active:opacity-0 top-0 left-0 w-full h-full bg-green-light-a mix-blend-hue pointer-events-none transition-opacity duration-300" />
         </ChildDiv>
       ))}
     </GridLine>
