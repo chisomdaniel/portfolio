@@ -1,6 +1,7 @@
 import { SOCIALS } from "@/data/socials";
 import Link from "next/link";
 import { ChildDiv } from "./motion";
+import { cn } from "@/utils/cn";
 
 function SocialLink({
   link,
@@ -21,9 +22,9 @@ function SocialLink({
   );
 }
 
-export default function SocialIcons() {
+export default function SocialIcons({ className }: { className?: string }) {
   return (
-    <ChildDiv className="flex gap-4">
+    <ChildDiv className={cn("flex gap-4", className)}>
       <SocialLink link={SOCIALS.github}>
         {/* <Image src="/icons/github.svg" alt="GitHub" width={24} height={24} /> */}
         <svg

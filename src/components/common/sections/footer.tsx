@@ -43,7 +43,7 @@ export default function Footer() {
           {/* end of markers */}
           <ChildDiv>
             <Link href="/">
-              <h1 className="text-5xl font-bold">
+              <h1 className="text-5xl font-bold text-foreground">
                 D<span className="text-primary">.</span>
               </h1>
             </Link>
