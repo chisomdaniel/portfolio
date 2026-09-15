@@ -26,7 +26,7 @@ export default function ContactMeSection() {
           <BtnPrimary
             url="/contact"
             text="START A CONVERSATION"
-            className="w-full justify-between md:w-fit gap-1.25 text-[15px] md:text[16px] bg-green-light-a border-green-light-b hover:bg-green-a active:bg-green-a hover:border-green-a active:border-green-a text-primary stroke-primary "
+            className="w-full justify-between md:w-fit gap-1.25 text-[15px] md:text[16px] text-center bg-green-light-a border-green-light-b hover:bg-green-a active:bg-green-a hover:border-green-a active:border-green-a text-primary stroke-primary "
           />
         </div>
       </ChildDiv>
