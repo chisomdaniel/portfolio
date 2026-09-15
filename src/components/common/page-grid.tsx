@@ -6,16 +6,22 @@ import { motion } from "motion/react";
 type GridMarderProps = {
   side: "left" | "right";
   className?: string;
+  yAxis?: "top" | "bottom";
 };
 
-export function GridMarker({ side, className }: GridMarderProps) {
+export function GridMarker({
+  side,
+  className,
+  yAxis = "top",
+}: GridMarderProps) {
   return (
     <span
       className={cn(
-        "pointer-events-none absolute top-0 z-30 h-6 w-6 -translate-y-1/2",
+        "pointer-events-none absolute z-30 h-6 w-6 -translate-y-1/2",
         side === "left"
           ? "left-(--page-inset) -translate-x-1/2"
           : "right-(--page-inset) translate-x-1/2",
+        yAxis === "top" ? "top-0" : "bottom-0 translate-y-1/2",
         className,
       )}
     >
@@ -79,8 +85,32 @@ export function PageGrid() {
 
 export function GreenGridBar({ className }: { className?: string }) {
   return (
-    <GridLine markers className={cn("z-30 overflow-hidden", className)}>
+    <GridLine markers className={cn("z-30", className)}>
       <div className="h-9 border-y border-green-500/10 bg-[repeating-linear-gradient(90deg,rgba(34,197,94,0.12)_0px,rgba(34,197,94,0.12)_2px,var(--background)_2px,var(--background)_7px)]" />
     </GridLine>
+  );
+}
+
+export function VerticalGreenGridBar({
+  className,
+  markerSide,
+}: {
+  className?: string;
+  markerSide: "left" | "right";
+}) {
+  return (
+    <div className={cn("relative w-4.5 md:w-9 shrink-0", className)}>
+      <GridMarker
+        side={markerSide}
+        yAxis="top"
+        className={markerSide === "left" ? "left-0" : "right-0"}
+      />
+      <GridMarker
+        side={markerSide}
+        yAxis="bottom"
+        className={markerSide === "left" ? "left-0" : "right-0"}
+      />
+      <div className="w-full h-full border-y border-line-color bg-[repeating-linear-gradient(0deg,var(--background)_1px,var(--background)_5px,rgba(34,197,94,0.12)_5px,rgba(34,197,94,0.12)_7px)]" />
+    </div>
   );
 }

@@ -8,6 +8,7 @@ import Projects from "@/components/home/projects";
 import Skills from "@/components/home/skills";
 import Articles from "@/components/home/articles";
 import ExperienceSection from "@/components/home/experience";
+import ContactMeSection from "@/components/home/contact-me";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Skills />
       <GreenGridBar />
       <Articles />
+      <ContactMeSection />
     </main>
   );
 }
