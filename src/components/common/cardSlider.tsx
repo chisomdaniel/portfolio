@@ -27,34 +27,33 @@ export default function InteractiveCardSlider({
   // tracks [activeIndex, direction Trend  (1 for next, -1 for prev)]
   const [[index, direction], setIndex] = useState([0, 1]);
   const [isHovered, setIsHovered] = useState(false);
+  const [timerResetKey, setTimerResetKey] = useState(0);
 
   // helper function to handle moving to a specific card index
   const goToCard = (nextIndex: number, customDirection?: number) => {
     // if no direction is passed, calculate it based on index comparison
     const trend = customDirection ?? (nextIndex > index ? 1 : -1);
     setIndex([nextIndex, trend]);
+    setTimerResetKey((key) => key + 1);
   };
 
   useEffect(() => {
     if (isHovered) return;
 
     const interval = setInterval(() => {
-      setIndex(([currentIndex]) => [
-        (currentIndex + 1) % children.length,
-        1,
-      ]); // auto-advance forward
+      setIndex(([currentIndex]) => [(currentIndex + 1) % children.length, 1]); // auto-advance forward
     }, waitDuration);
 
     return () => clearInterval(interval);
-  }, [isHovered, children.length, waitDuration]);
+  }, [isHovered, children.length, waitDuration, timerResetKey]);
 
   const handleDragEnd = (event: TouchEvent, info: PanInfo) => {
-    const swipThreshold = 50;
-    if (info.offset.x < -swipThreshold) {
+    const swipeThreshold = 25; // minimum distance in pixels to consider a swipe
+    if (info.offset.x < -swipeThreshold) {
       // swiped left, go to next card
       const nextIndex = (index + 1) % children.length;
       goToCard(nextIndex, 1);
-    } else if (info.offset.x > swipThreshold) {
+    } else if (info.offset.x > swipeThreshold) {
       // swiped right, go to previous card
       const prevIndex = (index - 1 + children.length) % children.length;
       goToCard(prevIndex, -1);
