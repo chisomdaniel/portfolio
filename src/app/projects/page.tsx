@@ -1,7 +1,7 @@
 import BrandLogos from "@/components/home/brand-logos";
 import SectionHeader from "@/components/common/sections/section-hero";
 import AllProjects from "@/components/common/sections/all-projects";
-import Testimonials from "@/components/projects/testimonials";
+import Testimonials from "@/components/common/sections/testimonials";
 
 export default function Projects() {
   return (

@@ -9,6 +9,7 @@ import Skills from "@/components/home/skills";
 import Articles from "@/components/home/articles";
 import ExperienceSection from "@/components/home/experience";
 import ContactMeSection from "@/components/home/contact-me";
+import Testimonials from "@/components/home/testimonials";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <ExperienceSection />
       <GreenGridBar />
       <Skills />
+      <Testimonials />
       <GreenGridBar />
       <Articles />
       <ContactMeSection />

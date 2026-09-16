@@ -3,6 +3,7 @@ import AboutSection from "@/components/about/about";
 import { GreenGridBar } from "@/components/common/page-grid";
 import WhySection from "@/components/about/why";
 import StatsSection from "@/components/about/stats";
+import Testimonials from "@/components/common/sections/testimonials";
 
 export default function About() {
   return (
@@ -12,6 +13,8 @@ export default function About() {
       <GreenGridBar />
       <WhySection />
       <StatsSection />
+      <GreenGridBar />
+      <Testimonials />
     </main>
   );
 }
