@@ -1,7 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { motion, AnimatePresence, PanInfo } from "motion/react";
 import { cn } from "@/utils/cn";
+import { VerticalGreenGridBar } from "./page-grid";
 
 const cardVariants = {
   enter: (direction: number) => ({
@@ -28,6 +29,31 @@ export default function InteractiveGridSlider({
   const [[index, direction], setIndex] = useState([[0, 1, 2], 1]);
   const [isHovered, setIsHovered] = useState(false);
   const [timerResetKey, setTimerResetKey] = useState(0);
+  const [maxCardHeight, setMaxCardHeight] = useState(0);
+  const measurementRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const measurementElement = measurementRef.current;
+    if (!measurementElement) return;
+
+    const measureCards = () => {
+      const heights = Array.from(
+        measurementElement.querySelectorAll<HTMLElement>(
+          "[data-review-card-measurement]",
+        ),
+      ).map((card) => card.getBoundingClientRect().height);
+
+      setMaxCardHeight(Math.max(0, ...heights));
+    };
+
+    const observer = new ResizeObserver(measureCards);
+    measurementElement
+      .querySelectorAll<HTMLElement>("[data-review-card-measurement]")
+      .forEach((card) => observer.observe(card));
+    measureCards();
+
+    return () => observer.disconnect();
+  }, [children]);
 
   // helper function to handle moving to a specific card index
   const goToCard = (nextIndex: number, customDirection?: number) => {
@@ -76,35 +102,56 @@ export default function InteractiveGridSlider({
 
   return (
     <div className={className}>
-      <div
-        className="relative w-full h-full overflow-hidden cursor-grab active:cursor-grabbing"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <motion.div
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.7}
-          onDragEnd={handleDragEnd}
-          className="grid grid-cols-3 gap-5"
+      <div className="flex">
+        <VerticalGreenGridBar markerSide="left" />
+        <div
+          className="relative w-full h-full overflow-hidden cursor-grab active:cursor-grabbing"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
-          <AnimatePresence initial={false} custom={direction} mode="popLayout">
-            {index.map((cardIndex) => (
-              <motion.div
-                key={cardIndex}
-                custom={direction}
-                variants={cardVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                layout
-                transition={{ ease: "easeInOut", duration: 0.8 }}
-              >
-                {children[cardIndex]}
-              </motion.div>
+          <div
+            ref={measurementRef}
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 invisible pointer-events-none grid grid-flow-col auto-cols-[100%] md:auto-cols-[calc((100%-1.25rem)/2)] xl:auto-cols-[calc((100%-2.5rem)/3)] gap-5"
+          >
+            {children.map((child, childIndex) => (
+              <div key={childIndex} data-review-card-measurement>
+                {child}
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </div>
+
+          <motion.div
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.7}
+            onDragEnd={handleDragEnd}
+            className="grid grid-flow-col auto-cols-[100%] md:auto-cols-[calc((100%-1.25rem)/2)] xl:auto-cols-[calc((100%-2.5rem)/3)] gap-5"
+            style={{ minHeight: maxCardHeight || undefined }}
+          >
+            <AnimatePresence
+              initial={false}
+              custom={direction}
+              mode="popLayout"
+            >
+              {index.map((cardIndex) => (
+                <motion.div
+                  key={cardIndex}
+                  custom={direction}
+                  variants={cardVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  layout
+                  transition={{ ease: "easeInOut", duration: 0.8 }}
+                >
+                  {children[cardIndex]}
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </div>
+        <VerticalGreenGridBar markerSide="right" />
       </div>
 
       {/* pagination dots */}

@@ -7,15 +7,18 @@ import { StarReview } from "@/data/testimonials.data";
 import InteractiveGridSlider from "../common/gridSlider";
 import { Testimonials as testimonialsData } from "@/data/testimonials.data";
 import ReviewCard from "../common/reviewCard";
+// import { VerticalGreenGridBar } from "../common/page-grid";
 
 export default function Testimonials() {
   return (
     <GridLine
       markers
-      className="px-10 py-15 lg:px-20 lg:py-30 flex flex-col gap-5"
+      className="px-(--page-inset) py-15 lg:py-30 flex flex-col gap-5"
     >
-      <Eyebrow title="TESTIMONIALS" />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14 text-secondary-text">
+      <div className="px-5 lg:px-15">
+        <Eyebrow title="TESTIMONIALS" />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14 text-secondary-text px-5 lg:px-15">
         <div className="md:col-span-2 xl:col-span-1 flex gap-5 items-start flex-col">
           <H2 className="font-primary text-foreground text-[38px]/[43.7px] md:text-[44px]/[50.6px] xl:text-[52px]/[50.6px] font-medium">
             Client Stories
@@ -59,7 +62,7 @@ export default function Testimonials() {
           </div>
         </ChildDiv>
       </div>
-      <div>
+      <div className="mt-10">
         <InteractiveGridSlider>
           {testimonialsData.map((testimonial, idx) => (
             <ReviewCard

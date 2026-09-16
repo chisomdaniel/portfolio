@@ -20,7 +20,10 @@ export default function ReviewCard({
   return (
     <div
       key={id}
-      className={cn("border border-green-a bg-green-light-a p-7.5", className)}
+      className={cn(
+        "flex h-full flex-col border border-green-a bg-green-light-a p-7.5",
+        className,
+      )}
     >
       <div className="flex gap-1.5 mb-6">
         {Array.from({ length: rating }).map((_, index) => (
@@ -33,7 +36,7 @@ export default function ReviewCard({
       <div className="mb-7.5">
         <p className="text-white text-[18px]/[25px]">&rdquo;{review}&rdquo;</p>
       </div>
-      <div className="flex gap-5 items-center">
+      <div className="mt-auto flex items-center gap-5">
         <Image
           src={reviewer.image}
           alt={reviewer.name}
