@@ -15,10 +15,10 @@ export default function Testimonials() {
       markers
       className="px-(--page-inset) py-15 lg:py-30 flex flex-col gap-5"
     >
-      <div className="px-5 lg:px-15">
+      <div className="px-5 lg:px-10">
         <Eyebrow title="TESTIMONIALS" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14 text-secondary-text px-5 lg:px-15">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14 text-secondary-text px-5 lg:px-10">
         <div className="md:col-span-2 xl:col-span-1 flex gap-5 items-start flex-col">
           <H2 className="font-primary text-foreground text-[38px]/[43.7px] md:text-[44px]/[50.6px] xl:text-[52px]/[50.6px] font-medium">
             Client Stories
