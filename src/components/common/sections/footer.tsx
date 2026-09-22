@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 justify-items-stretch py-10 px-5 xl:px-10 gap-6">
           <div className="flex flex-col gap-6 md:w-65">
-            <H6 className="font-primary font-medium text-[18px]/[25.2px] md:text-[20px]/[28px]">
+            <H6 className="font-primary text-foreground font-medium text-[18px]/[25.2px] md:text-[20px]/[28px]">
               Navigation:
             </H6>
 
@@ -75,7 +75,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="flex flex-col gap-6 md:w-65">
-            <H6 className="font-primary font-medium text-[18px]/[25.2px] md:text-[20px]/[28px]">
+            <H6 className="font-primary text-foreground font-medium text-[18px]/[25.2px] md:text-[20px]/[28px]">
               Resources:
             </H6>
 

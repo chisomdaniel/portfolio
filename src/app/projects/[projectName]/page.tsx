@@ -2,6 +2,7 @@ import SectionHero from "@/components/common/sections/section-hero";
 import { PROJECTS } from "@/data/projects.data";
 import { notFound } from "next/navigation";
 import ProjectInfo from "@/components/projects/projectInfo";
+import ContactMeSection from "@/components/common/sections/contact-me";
 
 export default async function Page({
   params,
@@ -23,6 +24,7 @@ export default async function Page({
         title={projectName.charAt(0).toUpperCase() + projectName.slice(1)}
       />
       <ProjectInfo project={project} />
+      <ContactMeSection />
     </main>
   );
 }
